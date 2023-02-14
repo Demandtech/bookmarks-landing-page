@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+:root {
+  --softBlue: hsl(231, 69%, 60%);
+  --softRed: hsl(0, 94%, 66%);
+  --grayishBlue: hsl(229, 8%, 60%);
+  --veryDarkBlue: hsl(229, 31%, 21%);
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik';
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.open-nav {
+  background: var(--veryDarkBlue);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.open-nav .nav-lists{
+  height: calc(100vh - 90px) !important;
+  position:absolute;
+  padding: 0 25px;
+  transition: 0.5s;
+  background:var(--veryDarkBlue);
+  right: 0;
+  left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.open-nav .bookmark {
+  fill: #ffffff;
+}
+.open-nav .logo circle {
+  fill: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.open-nav .flag {
+  fill: var(--veryDarkBlue);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.open-nav .logo-wrapper{
+  border-bottom: 1px solid var(--grayishBlue);
 }
