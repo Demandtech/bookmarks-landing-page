@@ -29,7 +29,7 @@ const Hero = () => {
 }
 
 const Wrapper = styled.section`
-  padding-top: 50px;
+  padding: 50px 0;
   .left {
     width: 100%;
     position: relative;
@@ -83,6 +83,7 @@ const Wrapper = styled.section`
         background: var(--softBlue);
         border: 2px solid var(--softBlue);
         border-radius: 5px;
+        transition: 0.5s;
         a {
           color: #ffffff;
         }
@@ -100,7 +101,7 @@ const Wrapper = styled.section`
         background: var(--grayishBlue);
         border: 2px solid var(--grayishBlue);
         border-radius: 5px;
-
+        transition: 0.5s;
         a {
           color: var(--veryDarkBlue);
         }

@@ -3,6 +3,7 @@
   --softRed: hsl(0, 94%, 66%);
   --grayishBlue: hsl(229, 8%, 60%);
   --veryDarkBlue: hsl(229, 31%, 21%);
+  --white: #ffffff;
 }
 *,
 ::after,
@@ -11,7 +12,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Rubik';
- 
 }
 
 .open-nav {
@@ -29,10 +29,10 @@
 }
 
 .open-nav .bookmark {
-  fill: #ffffff;
+  fill: var(--white)
 }
 .open-nav .logo circle {
-  fill: #ffffff;
+  fill: var(--white)
 }
 
 .open-nav .flag {
