@@ -9,6 +9,7 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary'
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
 import Typography from '@mui/material/Typography'
 import { ReactComponent as ArrowIcon } from '../assets/images/icon-arrow.svg'
+import Button from './Button'
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -91,7 +92,7 @@ export default function CustomizedAccordions() {
           )
         })}
         <div className='btn'>
-          <button>More Info</button>
+          <Button type={'primary'} label={'more info'}/>
         </div>
       </div>
     </Wrapper>
@@ -128,19 +129,7 @@ const Wrapper = Styled.section`
   .btn{
    text-align: center;
    margin-top: 50px;
-   button{
-     background: var(--softBlue);
-   border: 2px solid var(--softBlue);
-   color: var(--white);
-   padding: 10px 15px;
-   border-radius: 5px;
-   transition: .5s;
-   cursor: pointer;
-   &:hover{
-    background: transparent;
-    color: var(--softBlue);
-   }
-   }
+   
   }
  }
   @media screen and (min-width: 835px) {
