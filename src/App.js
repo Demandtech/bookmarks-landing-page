@@ -1,5 +1,5 @@
 import './App.css';
-import { Navbar, Sidebar, Hero, Features } from './components';
+import { Navbar, Sidebar, Hero, Features, Extensions, Question, NewsLetter } from './components';
 
 function App() {
   return (
@@ -8,6 +8,9 @@ function App() {
       <Sidebar />
       <Hero />
       <Features />
+      <Extensions />
+      <Question />
+      <NewsLetter />
     </>
   );
 }

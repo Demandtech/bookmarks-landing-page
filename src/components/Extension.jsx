@@ -1,36 +1,65 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Extension = () => {
+const Extension = ({ img, version, name }) => {
   return (
     <Wrapper>
-      <div className='header'>
-        <h3>Download the extension</h3>
-        <p>
-          We’ve got more browsers in the pipeline. Please do let us know if
-          you’ve got a favourite you’d like us to prioritize.
-        </p>
+      <div className='content'>
+        <img src={img} alt={name} />
+        <h4>Add to {name}</h4>
+        <p>{version}</p>
+      </div>
+      <div className='btn'>
+        <button>Add & Install Extension</button>
       </div>
     </Wrapper>
   )
 }
 
-const Wrapper = styled.section`
-  padding: 25px;
-  .header {
-    text-align: center;
+const Wrapper = styled.article`
+  text-align: center;
+  box-shadow: 2px 2px 8px var(--softBlue);
+  margin-bottom: 25px;
+  border-radius: 5px;
+  .content {
+    border-bottom: 4px dotted var(--grayishBlue);
+    padding: 40px 0;
 
-    h3 {
+    img {
+      margin-bottom: 20px;
+    }
+
+    h4 {
       color: var(--veryDarkBlue);
+      padding-bottom: 10px;
       font-weight: 300;
-      margin-bottom: 15px;
-      font-size: 25px;
+      font-size: 22px;
     }
     p {
       color: var(--grayishBlue);
-      line-height: 1.5;
     }
   }
-`
+  .btn {
+    padding: 20px;
+    button {
+      background: var(--softBlue);
+      width: 100%;
+      border: 2px solid var(--softBlue);
+      border-radius: 5px;
+      color: var(--white);
+      padding: 10px 0;
+      transition: 0.5s;
+      cursor: pointer;
 
+      &:hover {
+        background: transparent;
+        color: var(--softBlue);
+      }
+    }
+  }
+
+  @media screen and (min-width: 835px) {
+    min-width: 300px;
+  }
+`
 export default Extension

@@ -29,7 +29,7 @@ const Hero = () => {
 }
 
 const Wrapper = styled.section`
-  padding: 50px 0;
+  padding-top: 50px;
   .left {
     width: 100%;
     position: relative;
@@ -51,7 +51,7 @@ const Wrapper = styled.section`
   }
 
   .right {
-    padding: 50px 25px;
+    padding: 20px 25px 25px;
     text-align: center;
 
     h1 {
@@ -121,7 +121,8 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-
+    max-width: 1440px;
+    margin: 0 auto;
     .right {
       padding-left: 100px;
       width: 50%;

@@ -74,7 +74,7 @@ const Wrapper = styled.section`
       .btn {
         width: 100%;
         border-bottom: 2px solid var(--grayishBlue);
-        transition: .5s;
+        transition: 0.5s;
 
         text-align: center;
         button {
@@ -89,13 +89,13 @@ const Wrapper = styled.section`
 
       .active-tab {
         border-bottom: 4px solid var(--softRed);
-        transition: .5s;
+        transition: 0.5s;
       }
     }
     article {
       .img-content {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 70px;
         position: relative;
         img {
           width: 100%;
@@ -135,6 +135,8 @@ const Wrapper = styled.section`
 
   @media screen and (min-width: 835px) {
     padding: 50px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
     .features-header {
       width: 50%;
       margin: 0 auto;
