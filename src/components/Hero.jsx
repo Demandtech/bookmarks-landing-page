@@ -134,6 +134,13 @@ const Wrapper = styled.section`
         justify-content: flex-start;
         gap: 20px;
       }
+
+      h1 {
+        font-weight: 700;
+        font-size: 45px;
+        margin-bottom: 20px;
+        color: var(--veryDarkBlue);
+      }
     }
 
     .left {
