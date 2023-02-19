@@ -138,6 +138,9 @@ const Wrapper = Styled.section`
   @media screen and (min-width: 835px) {
     max-width: 1440px;
     margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
   .container {
     width: 50%;
     margin: 0 auto;

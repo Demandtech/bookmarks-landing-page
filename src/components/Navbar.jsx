@@ -42,7 +42,7 @@ const Navbar = () => {
           </li>
           <li>
             {/* eslint-disable-next-line */}
-            <a href={'/'}>pricing</a>
+            <a href={'#pricing'}>pricing</a>
           </li>
           <li>
             {/* eslint-disable-next-line */}
@@ -59,7 +59,7 @@ const Wrapper = styled.header`
   .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 30px 100px;
+    padding: 40px 100px;
     max-width: 1440px;
     margin: 0 auto;
     z-index: 100;

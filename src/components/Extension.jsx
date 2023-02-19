@@ -63,7 +63,7 @@ const Wrapper = styled.article`
   }
 
   @media screen and (min-width: 835px) {
-    min-width: 300px;
+    min-width: 290px;
   }
 `
 export default Extension

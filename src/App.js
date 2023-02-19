@@ -4,7 +4,6 @@ import { Navbar, Sidebar, Hero, Features, Extensions, Question, Contact, Footer 
 function App() {
   return (
     <>
-      <Navbar />
       <Sidebar />
       <Hero />
       <Features />

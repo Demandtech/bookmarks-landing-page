@@ -51,11 +51,14 @@ const Wrapper = styled.section`
     }
   }
   @media screen and (min-width: 835px) {
+    height: 100vh;
     max-width: 1440px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-item: center;
 
-    .container {
-      padding: 0 150px;
+    .container {   
       .header {
         width: 50%;
         margin: 0 auto;
@@ -70,6 +73,7 @@ const Wrapper = styled.section`
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+        width: 100%;
 
         .firefox {
           transform: translateY(30px);
