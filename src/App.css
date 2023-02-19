@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 :root {
   --softBlue: hsl(231, 69%, 60%);
   --softRed: hsl(0, 94%, 66%);
@@ -5,6 +9,7 @@
   --veryDarkBlue: hsl(229, 31%, 21%);
   --white: #ffffff;
 }
+
 *,
 ::after,
 ::before {
@@ -12,33 +17,4 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Rubik';
-}
-
-.open-nav {
-  background: var(--veryDarkBlue);
-}
-
-.open-nav .nav-lists{
-  height: calc(100vh - 90px) !important;
-  position:absolute;
-  padding: 0 25px;
-  transition: 0.5s;
-  background:var(--veryDarkBlue);
-  right: 0;
-  left: 0;
-}
-
-.open-nav .bookmark {
-  fill: var(--white)
-}
-.open-nav .logo circle {
-  fill: var(--white)
-}
-
-.open-nav .flag {
-  fill: var(--veryDarkBlue);
-}
-
-.open-nav .logo-wrapper{
-  border-bottom: 1px solid var(--grayishBlue);
 }

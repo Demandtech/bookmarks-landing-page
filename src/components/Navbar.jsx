@@ -1,88 +1,99 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import { ReactComponent as Logo } from '../assets/images/logo-bookmark.svg'
 import styled from 'styled-components'
+import Button from './Button'
+
 
 
 const Navbar = () => {
   //const [openNav, setOpenNav] = useState(false)
+  const navContainer = useRef(null);
 
+  const stickyNav = function(entries){
+   const [entry] = entries
+   if(!entry.isIntersecting) navContainer.current.classList.add('sticky')
+   else navContainer.current.classList.remove('sticky')
+  }
+
+  useEffect(()=>{
+    const header = document.querySelector('.hero');
+    const navHeight = navContainer.current.getBoundingClientRect().height;
+    console.log(header, navHeight)
+    const headerObserver = new IntersectionObserver(stickyNav, {
+      root: null,
+      threshold: 0,
+      rootMargin: `-${navHeight}px`
+    })
+    headerObserver.observe(header)
+  }, [])
   return (
     <Wrapper >
-      <div className='logo-wrapper'>
-        <div>
-          <Logo className='logo' />
+      <nav className='navbar' ref={navContainer}>
+        <div className='logo-wrapper'>
+          <div>
+            <Logo className='logo' />
+          </div>
         </div>
-        {/* <div className='hamburger'>
-          <button onClick={() => setOpenNav(!openNav)}>
-            {openNav ? <CloseIcon /> : <HambugerIcon />}
-          </button>
-        </div> */}
-      </div>
 
-      <ul className='nav-lists'>
-        <li>
-          {/* eslint-disable-next-line */}
-          <a href={'/'}>Features</a>
-        </li>
-        <li>
-          {/* eslint-disable-next-line */}
-          <a href={'/'}>pricing</a>
-        </li>
-        <li>
-          {/* eslint-disable-next-line */}
-          <a href={'/'}>contact</a>
-        </li>
-
-        <button className='login'>Login</button>
-      </ul>
+        <ul className='nav-lists'>
+          <li>
+            {/* eslint-disable-next-line */}
+            <a href={'#features'}>Features</a>
+          </li>
+          <li>
+            {/* eslint-disable-next-line */}
+            <a href={'/'}>pricing</a>
+          </li>
+          <li>
+            {/* eslint-disable-next-line */}
+            <a href={'#contact'}>contact</a>
+          </li>
+          <Button label={'Login'} type={'secondary'} />
+        </ul>
+      </nav>
     </Wrapper>
   )
 }
 
-const Wrapper = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 100px;
-  max-width: 1440px;
-  margin: 0 auto;
-  .nav-lists {
+const Wrapper = styled.header`
+  .navbar {
     display: flex;
-    list-style-type: none;
-    align-items: center;
-    gap: 40px;
+    justify-content: space-between;
+    padding: 30px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 100;
 
-    a {
-      text-transform: uppercase;
-      font-size: 18px;
-      text-decoration: none;
-      color: var(--veryDarkBlue);
-      transition: all 0.3s;
-      
+    &.sticky {
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.95);
+      top: 0;
+      left: 0;
+      right: 0;
+    }
 
-      &:hover {
-        color: var(--softRed);
+    .nav-lists {
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      gap: 40px;
+
+      a {
+        text-transform: uppercase;
+        font-size: 18px;
+        text-decoration: none;
+        color: var(--veryDarkBlue);
+        transition: all 0.3s;
+
+        &:hover {
+          color: var(--softRed);
+        }
       }
     }
 
-    button {
-      all: unset;
-      background: var(--softRed);
-      border: 2px solid var(--softRed);
-      color: #ffffff;
-      padding: 7px 25px;
-      border-radius: 5px;
-      transition: all 0.3s;
-      cursor:pointer;
-
-      &:hover {
-        color: var(--softRed);
-        background: #ffffff;
-      }
+    @media screen and (max-width: 835px) {
+      display: none;
     }
-  }
-
-  @media screen and (max-width:835px){
-    display:none;
   }
 `
 

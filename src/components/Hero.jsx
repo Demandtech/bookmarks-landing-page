@@ -1,14 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import heroImg from '../assets/images/illustration-hero.svg'
+import { motion } from 'framer-motion'
 
 const Hero = () => {
   return (
-    <Wrapper>
-      <div className='left'>
+    <Wrapper className='hero'>
+      <motion.div  className='left'>
         <div className='bg'></div>
         <img src={heroImg} alt='' />
-      </div>
+      </motion.div>
       <div className='right'>
         <h1>A Simple Bookmark Manager</h1>
         <p>
@@ -30,6 +31,7 @@ const Hero = () => {
 
 const Wrapper = styled.section`
   padding-top: 50px;
+  margin-top: 50px;
   .left {
     width: 100%;
     position: relative;

@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import Extension from './Extension'
 import { exts } from '../utils'
 
+
 const Extensions = () => {
   return (
-    <Wrapper>
+    <Wrapper id='pricing'>
       <div className='container'>
         <div className='header'>
           <h2>Download the extension</h2>
@@ -67,6 +68,8 @@ const Wrapper = styled.section`
       .extensions-wrapper {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
 
         .firefox {
           transform: translateY(30px);

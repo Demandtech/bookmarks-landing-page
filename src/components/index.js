@@ -4,6 +4,7 @@ import Hero from './Hero'
 import Features from './Features'
 import Extensions from './Extensions'
 import Question from './Question'
-import NewsLetter from './NewsLetter'
+import Contact from './Contact'
+import Footer from './Footer'
 
-export { Navbar, Sidebar, Hero, Features, Extensions, Question, NewsLetter }
+export { Navbar, Sidebar, Hero, Features, Extensions, Question, Contact, Footer }

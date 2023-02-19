@@ -1,9 +1,7 @@
 import * as React from 'react'
-//import Accordion from './Accordion'
 import { styled } from '@mui/material/styles'
 import Styled from 'styled-components'
 import { questions } from '../utils'
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
 import MuiAccordion from '@mui/material/Accordion'
 import MuiAccordionSummary from '@mui/material/AccordionSummary'
 import MuiAccordionDetails from '@mui/material/AccordionDetails'
@@ -15,9 +13,9 @@ const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
   border: 0,
-  
+  borderBottom: '2px solid var(--grayishBlue)',
   '&:not(:last-child)': {
-    borderBottom: '1.5px solid var(--grayishBlue)',
+    borderBottom: '2px solid red',
   },
   '&:before': {
     display: 'none',
@@ -121,7 +119,12 @@ const Wrapper = Styled.section`
   .question{
       font-size: 15px;
       font-weight: 100;
-      color: var(--veryDarkBlue)
+      color: var(--veryDarkBlue);
+      transition: .5s;
+
+      &:hover{
+        color: var(--softRed);
+      }
     }
   .answer{
    color: var(--grayishBlue);

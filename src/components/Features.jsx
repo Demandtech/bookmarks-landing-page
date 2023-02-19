@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { tabs } from '../utils'
+import Button from './Button'
+import {motion} from 'framer-motion'
 
 const Features = () => {
   const [value, setValue] = useState(0)
   const { title, text, img } = tabs[value]
 
   return (
-    <Wrapper>
+    <Wrapper id='features'>
       <div className='features-header'>
         <h2>Features</h2>
         <p>
@@ -40,7 +42,7 @@ const Features = () => {
           <div className='text-content'>
             <h3>{title}</h3>
             <p>{text}</p>
-            <button>More Info</button>
+            <Button label={'More Info'} type={'primary'}/>
           </div>
         </article>
       </section>
@@ -84,12 +86,19 @@ const Wrapper = styled.section`
           background: transparent;
           padding: 15px 0;
           cursor: pointer;
+          width: auto;
+
+          &:hover{
+            color: var(--softRed)
+          }
         }
       }
 
       .active-tab {
-        border-bottom: 4px solid var(--softRed);
-        transition: 0.5s;
+        button {
+          border-bottom: 4px solid var(--softRed);
+          color: var(--veryDarkBlue);
+        }
       }
     }
     article {
@@ -156,7 +165,7 @@ const Wrapper = styled.section`
         .btn {
           button {
             text-align: center;
-            width: auto;
+            width: 100%;
           }
         }
       }
@@ -186,18 +195,6 @@ const Wrapper = styled.section`
 
           button {
             display: block;
-            background: var(--softBlue);
-            color: var(--white);
-            border-radius: 4px;
-            padding: 10px 15px;
-            border: 2px solid var(--softBlue);
-            transition: 0.5s;
-            cursor: pointer;
-
-            &:hover {
-              background: transparent;
-              color: var(--softBlue);
-            }
           }
         }
       }

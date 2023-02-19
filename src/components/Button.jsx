@@ -1,4 +1,3 @@
-import { type } from '@testing-library/user-event/dist/type';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -9,7 +8,7 @@ const Button = ({label, type}) => {
   )
 }
 const ButtonWrapper = styled.button`
-  padding: 15px 20px;
+  padding: 10px 20px;
   text-transform: capitalize;
   border-radius: 4px;
   font-size: 16px;
@@ -25,7 +24,7 @@ const ButtonWrapper = styled.button`
   &:hover {
     color: ${(props) =>
       props.type === 'secondary' ? 'var(--softRed)' : 'var(--softBlue)'};
-   background: transparent;
+   background: var(--white);
   }
 `
 

@@ -1,18 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
+import Button from './Button'
+import {motion} from 'framer-motion'
 
 const Extension = ({ img, version, name }) => {
   return (
-    <Wrapper>
-      <div className='content'>
-        <img src={img} alt={name} />
-        <h4>Add to {name}</h4>
-        <p>{version}</p>
-      </div>
-      <div className='btn'>
-        <button>Add & Install Extension</button>
-      </div>
-    </Wrapper>
+    <motion.div  whileHover={{scale:1.1}} whileTap={{scale:0.9}}>
+      <Wrapper>
+        <div className='content'>
+          <img src={img} alt={name} />
+          <h4>Add to {name}</h4>
+          <p>{version}</p>
+        </div>
+        <div className='btn'>
+          <Button label={`Add To ${name}`} />
+        </div>
+      </Wrapper>
+    </motion.div>
   )
 }
 
