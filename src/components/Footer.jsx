@@ -15,23 +15,23 @@ const Footer = () => {
       <ul className='nav-lists'>
         <li>
           {/* eslint-disable-next-line */}
-          <a href={'/'}>Features</a>
+          <a href={'#features'}>Features</a>
         </li>
         <li>
           {/* eslint-disable-next-line */}
-          <a href={'/'}>pricing</a>
+          <a href={'#pricing'}>pricing</a>
         </li>
         <li>
           {/* eslint-disable-next-line */}
-          <a href={'/'}>contact</a>
+          <a href={'#contact'}>contact</a>
         </li>
       </ul>
       <div className='social'>
-        <a href='/' className='facebook'>
-          <Facebook className='facebook-icon' />
+        <a href='https://www.facebook.com' className='facebook'>
+           <Facebook className='facebook-icon' />
         </a>
 
-        <a href='/' className='twitter'>
+        <a href='https://www.twitter.com/demandtvs' className='twitter'>
           <Twitter className='twitter-icon' />
         </a>
       </div>
